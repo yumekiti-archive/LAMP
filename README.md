@@ -58,6 +58,6 @@ DELETE FROM test_db.meibo WHERE id = 1
 
 ### nginx
 
-./php/public/index.php
+./php/public/
 
 http://localhost:8080/
