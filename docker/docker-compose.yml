@@ -22,6 +22,9 @@ services:
         image: mysql:5.7
         container_name: db
         environment:
+            MYSQL_DATABASE: test_db
+            MYSQL_USER: test_user
+            MYSQL_PASSWORD: test_ps
             MYSQL_ROOT_PASSWORD: root
             TZ: "Asia/Tokyo"
         volumes:
