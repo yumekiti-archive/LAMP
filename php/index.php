@@ -7,6 +7,7 @@
 try {
 	// DBへ接続
 	$dbh = new PDO("mysql:host=db; dbname=test_db;", 'test_user', 'test_ps');
+    print('接続に成功しました。<br>');
 
 	$stmt = $dbh->prepare("SELECT * FROM meibo");
 

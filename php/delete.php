@@ -1,4 +1,4 @@
-<a href="/">back</a><br>
+<a href="/">back</a>
 <?php
 
 /**
