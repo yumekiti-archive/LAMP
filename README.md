@@ -2,6 +2,32 @@
 
 ## 使い方
 
+### docker
+
+起動
+```
+make up
+```
+
+停止
+```
+make down
+```
+
+削除
+```
+make rm
+```
+
+その他。
+```
+make logs       ログ見る
+make restart    再起動
+make db         dbのshellに入る
+```
+
+### php
+
 使い方がわかりにくかったので実際に書いてみました。
 
 ./php/index.php

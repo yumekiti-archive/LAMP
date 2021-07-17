@@ -3,21 +3,17 @@ GID := $(shell id -g)
 USER := $(UID):$(GID)
 dc := user=$(USER) docker-compose -f ./docker/docker-compose.yml
 
-.PHONY: init
-init:
-	$(dc) up -d --build && \
-	bash ./docker/php/sql.sh
-
 .PHONY: up
 up:
 	$(dc) up -d --build
+	bash ./docker/php/sql.sh
 
 .PHONY: down
 down:
 	$(dc) down
 
-.PHONY: reup
-reup:
+.PHONY: restart
+restart:
 	$(dc) -p lamp restart
 
 .PHONY: rm
