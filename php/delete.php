@@ -19,16 +19,23 @@ try{
     die();
 }
 
-/**
- * データの削除
- */
-$stmt = $dbh->query("DELETE FROM test_db.meibo WHERE id = 1");
-$results = $stmt->fetchall(PDO::FETCH_ASSOC);
-echo '<br />データ削除後<br />';
-var_dump($results);
+try{
 
-/**
- * デーブルの削除
- */
-$stmt = $dbh->query("DROP TABLE test_db.meibo");
-$results = $stmt->fetchall();
+    /**
+     * データの削除
+     */
+    $stmt = $dbh->query("DELETE FROM test_db.meibo WHERE id = 1");
+    $results = $stmt->fetchall(PDO::FETCH_ASSOC);
+    echo '<br />データ削除しました。<br />';
+    var_dump($results);
+
+    /**
+     * デーブルの削除
+     */
+    $stmt = $dbh->query("DROP TABLE test_db.meibo");
+    $results = $stmt->fetchall();
+    
+}catch(Throwable $t){
+    echo $t;
+    echo '<br>テーブルが存在しないか、構文エラーです。';
+}
