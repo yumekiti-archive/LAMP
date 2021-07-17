@@ -55,3 +55,9 @@ DELETE FROM test_db.meibo WHERE id = 1
 ```
 
 これをphpで行っている。
+
+### nginx
+
+./php/public/index.php
+
+http://localhost:8080/

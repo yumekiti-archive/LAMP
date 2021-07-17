@@ -10,7 +10,7 @@ services:
             - ../php:/var/www/html/
 
     nginx:
-        image: nginx
+        image: nginx:alpine
         container_name: nginx
         ports:
             - "8080:80"
