@@ -40,10 +40,10 @@ select * from meibo
 
 ./php/create.php
 ```
-mysql -u root -p 
-password root
+mysql -u test_user -p test_db
+password test_ps
 
-CREATE TABLE test_db.meibo (id INT,name TEXT)
+CREATE TABLE meibo (id INT,name TEXT)
 ```
 
 ./php/delete.php

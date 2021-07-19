@@ -4,9 +4,9 @@
 /**
  * PDOでMySQLに接続するためのパラメータ
  */
-$dsn = 'mysql:host=db';
-$user = 'root';
-$password = 'root';
+$dsn = 'mysql:host=db; dbname=test_db;';
+$user = 'test_user';
+$password = 'test_ps';
 
 /**
  * MySQLに接続
@@ -24,19 +24,19 @@ try{
     /**
      * テーブルの作成
      */
-    $stmt = $dbh->query("CREATE TABLE test_db.meibo (id INT,name TEXT)");
+    $stmt = $dbh->query("CREATE TABLE meibo (id INT,name TEXT)");
     /* 結果の取得*/
     $results = $stmt->fetchall();
 
     /**
      * データの挿入
      */
-    $stmt = $dbh->query("INSERT INTO test_db.meibo VALUES(1,'名無し1')");
+    $stmt = $dbh->query("INSERT INTO meibo VALUES(1,'名無し1')");
     $results = $stmt->fetchall();
     /* データの取得
      * PDO::FETCH_ASSOC 連想配列で返すフラグみたいなもの
      */
-    $stmt = $dbh->query("SELECT * FROM test_db.meibo");
+    $stmt = $dbh->query("SELECT * FROM meibo");
     $results = $stmt->fetchall(PDO::FETCH_ASSOC);
     echo '<br />データ挿入しました。<br />';
     var_dump($results);
