@@ -4,9 +4,9 @@
 /**
  * PDOでMySQLに接続するためのパラメータ
  */
-$dsn = 'mysql:host=db';
-$user = 'root';
-$password = 'root';
+$dsn = 'mysql:host=db; dbname=test_db;';
+$user = 'test_user';
+$password = 'test_ps';
 
 /**
  * MySQLに接続

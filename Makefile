@@ -6,7 +6,6 @@ dc := user=$(USER) docker-compose -f ./docker/docker-compose.yml
 .PHONY: up
 up:
 	$(dc) up -d --build
-	bash ./docker/mysql/sql.sh
 
 .PHONY: down
 down:
